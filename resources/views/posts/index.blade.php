@@ -11,6 +11,7 @@
             <tr>
                 <th>#</th>
                 <th>Title</th>
+                <th>Slug</th>
                 <th>Content</th>
                 <th>Action</th>
             </tr>
@@ -20,6 +21,8 @@
                 <tr>
                     <td>{{ $post->id }}</td>
                     <td>{{ $post->title }}</td>
+                    {{-- <td>{{ generateSlug($post->title) }}</td> --}}
+                    <td>{{ $post->slug }}</td>
                     <td>{{ Str::limit($post->content, 50) }}</td>
                     <td>
                         <a href="{{ route('posts.show', $post) }}" class="btn btn-info btn-sm">View</a>
